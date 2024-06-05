@@ -9,14 +9,14 @@
 </head>
 <body>
     <header class="header" id="header">
+        <div class="header-modes">
+            <img id="light-mode" src="public/img/light_mode.png" alt="Light Mode" style="height: 44px; cursor: pointer;" onclick="toggleMode('light')">
+            <img id="dark-mode" src="public/img/dark_mode.png" alt="Dark Mode" style="height: 44px; cursor: pointer; display: none;" onclick="toggleMode('dark')">
+        </div>  
         <div class="header-left">
             <h2>Apskates objekti ceļā uz Latvijas Universitāti</h2>
         </div>
-        <div class="header-right">
-            <div>
-                <img id="light-mode" src="public/img/light_mode.png" alt="Light Mode" style="height: 44px; cursor: pointer;" onclick="toggleMode('light')">
-                <img id="dark-mode" src="public/img/dark_mode.png" alt="Dark Mode" style="height: 44px; cursor: pointer; display: none;" onclick="toggleMode('dark')">
-            </div>                      
+        <div class="header-right">                    
             <button class="button-style" onclick="scrollToTop()">Sākums</button>
             <div class="dropdown">
                 <button class="dropbtn button-style">Apskates objekts</button>
