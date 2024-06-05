@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="lv">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +8,12 @@
     <link rel="stylesheet" href="public/styles.css">
 </head>
 <body>
-    <header>
+    <header class="header" id="header">
         <div class="header-left">
-            <h1>Mans ceļš uz LU</h1>
+            <h2>Apskates objekti ceļā uz Latvijas Universitāti</h2>
         </div>
         <div class="header-right">
-
-            <button class="button-style" onclick="scrollToTop() ">Sākums</button>
+            <button class="button-style" onclick="scrollToTop()">Sākums</button>
             <div class="dropdown">
                 <button class="dropbtn button-style">Apskates objekts</button>
                 <div class="dropdown-content">
@@ -30,9 +30,21 @@
         </div>
     </header>
 
-    <section id="object1" class="object-section">
+    <section id="object0" class="object-section object-section-left">
+        <div>
+            <div id="myHeaderStartPoint">
+                <h2>Apskates objekti ceļā uz Latvijas Universitāti</h2>
+            </div>
+            <div>
+                <p>Šeit ir teksts, kas apraksta pirmo apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
+                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="object1" class="object-section object-section-left">
         <div class="object-inline">
-            <div style="width: 50%;">
+            <div>
                 <h2>Pirmā apskates objekta nosaukums</h2>
                 <p>Šeit ir teksts, kas apraksta pirmo apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
                 <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
@@ -44,102 +56,102 @@
         <img class="object-image" src="public/img/object_1.png" alt="Pirmā objekta attēls">
     </section>
 
-    <section id="object2" class="object-section">
+    <section id="object2" class="object-section object-section-right">
         <div class="object-inline">
-            <div style="width: 50%;">
+            <div>
                 <h2>Otrā apskates objekta nosaukums</h2>
                 <p>Šeit ir teksts, kas apraksta otro apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
                 <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
             </div>
             <div>
-                <img class="showcase-image" src="public/img/object_2.jpg" alt="Pirmā objekta attēls">
+                <img class="showcase-image" src="public/img/object_2.jpg" alt="Otrā objekta attēls">
             </div>
         </div>
-        <img class="object-image" src="public/img/object_2.jpg" alt="Otrā objekta attēls">
+       <!-- <img class="object-image" src="public/img/object_2.jpg" alt="Otrā objekta attēls"> -->
     </section>
 
-    <section id="object3" class="object-section">
+    <section id="object3" class="object-section object-section-left">
         <div class="object-inline">
-            <div style="width: 50%;">
+            <div>
                 <h2>Trešā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta otro apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
+                <p>Šeit ir teksts, kas apraksta trešo apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
                 <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
             </div>
             <div>
-                <img class="showcase-image" src="public/img/object_3.jpg" alt="Pirmā objekta attēls">
+                <img class="showcase-image" src="public/img/object_3.jpg" alt="Trešā objekta attēls">
             </div>
         </div>
         <img class="object-image" src="public/img/object_3.jpg" alt="Trešā objekta attēls">
     </section>
 
-    <section id="object4" class="object-section">
+    <section id="object4" class="object-section object-section-right">
         <div class="object-inline">
-            <div style="width: 50%;">
+            <div>
                 <h2>Ceturtā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta otro apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
+                <p>Šeit ir teksts, kas apraksta ceturto apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
                 <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
             </div>
             <div>
-                <img class="showcase-image" src="public/img/object_4.jpg" alt="Pirmā objekta attēls">
+                <img class="showcase-image" src="public/img/object_4.jpg" alt="Ceturtā objekta attēls">
             </div>
         </div>
-        <img class="object-image" src="public/img/object_4.jpg" alt="Ceturtā objekta attēls">
+        <!-- <img class="object-image" src="public/img/object_4.jpg" alt="Ceturtā objekta attēls"> -->
     </section>
 
-    <section id="object5" class="object-section">
+    <section id="object5" class="object-section object-section-left">
         <div class="object-inline">
-            <div style="width: 50%;">
+            <div>
                 <h2>Piektā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta otro apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
+                <p>Šeit ir teksts, kas apraksta piekto apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
                 <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
             </div>
             <div>
-                <img class="showcase-image" src="public/img/object_5.jpg" alt="Pirmā objekta attēls">
+                <img class="showcase-image" src="public/img/object_5.jpg" alt="Piektais objekta attēls">
             </div>
         </div>
-        <img class="object-image" src="public/img/object_5.jpg" alt="Ceturtā objekta attēls">
+        <img class="object-image" src="public/img/object_5.jpg" alt="Piektais objekta attēls">
     </section>
 
-    <section id="object6" class="object-section">
+    <section id="object6" class="object-section object-section-right">
         <div class="object-inline">
-            <div style="width: 50%;">
-                <h2>sestā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta otro apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
-                <button class="button-style"onclick="moreInfo()">Vairāk informācija</button>
+            <div>
+                <h2>Sestā apskates objekta nosaukums</h2>
+                <p>Šeit ir teksts, kas apraksta sesto apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
+                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
             </div>
             <div>
-                <img class="showcase-image" src="public/img/object_6.jpg" alt="Pirmā objekta attēls">
+                <img class="showcase-image" src="public/img/object_6.jpg" alt="Sestā objekta attēls">
             </div>
         </div>
-        <img class="object-image" src="public/img/object_6.jpg" alt="sestā objekta attēls">
+        <!-- <img class="object-image" src="public/img/object_6.jpg" alt="Sestā objekta attēls"> -->
     </section>
 
-    <section id="object7" class="object-section">
+    <section id="object7" class="object-section object-section-left">
         <div class="object-inline">
-            <div style="width: 50%;">
+            <div>
                 <h2>Septītā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta otro apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
+                <p>Šeit ir teksts, kas apraksta septīto apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
                 <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
             </div>
             <div>
-                <img class="showcase-image" src="public/img/object_7.jpg" alt="Pirmā objekta attēls">
+                <img class="showcase-image" src="public/img/object_7.jpg" alt="Septītā objekta attēls">
             </div>
         </div>
-        <img class="object-image" src="public/img/object_7.jpg" alt="Astotā objekta attēls">
+        <img class="object-image" src="public/img/object_7.jpg" alt="Septītā objekta attēls">
     </section>
 
-    <section id="object8" class="object-section">
+    <section id="object8" class="object-section object-section-right">
         <div class="object-inline">
-            <div style="width: 50%;">
+            <div>
                 <h2>Astotā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta otro apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
+                <p>Šeit ir teksts, kas apraksta astoto apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
                 <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
             </div>
             <div>
-                <img class="showcase-image" src="public/img/object_8.jpg" alt="Pirmā objekta attēls">
+                <img class="showcase-image" src="public/img/object_8.jpg" alt="Astotā objekta attēls">
             </div>
         </div>
-        <img class="object-image" src="public/img/object_8.jpg" alt="Astotā objekta attēls">
+       <!--  <img class="object-image" src="public/img/object_8.jpg" alt="Astotā objekta attēls"> -->
     </section>
 
     <script>
@@ -150,6 +162,25 @@
         function moreInfo() {
             alert('Šeit būs vairāk informācijas par objektu.');
         }
+
+        window.onscroll = function() { makeHeaderSticky() };
+
+        var header = document.getElementById("header");
+        header.style.display = 'none';
+        var headerStartPoint = document.getElementById("myHeaderStartPoint");
+        var sticky = headerStartPoint.offsetTop;
+
+        function makeHeaderSticky() {
+            if (window.pageYOffset > sticky) {
+             //   header.style.display = 'block';
+                $('#header').fadeIn('fast');
+                header.classList.add("sticky");
+            } else {
+                header.style.display = 'none';
+                header.classList.remove("sticky");
+            }
+        }
+
     </script>
 </body>
 </html>

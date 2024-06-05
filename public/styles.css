@@ -1,8 +1,11 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -12,107 +15,184 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f8f8f8;
-    padding: 10px 20px;
-    border-bottom: 1px solid #ccc;
+    background-color: #fff; /* Dark blue background color */
+    color: black; /* Text color */
+    padding: 20px 40px; /* Padding */
+    display: flex; /* Flexbox layout */
+    justify-content: center;
+    align-items: center; /* Center alignment for items */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow */
 }
 
-.header-left h1 {
-    margin-left: 20vh;
+.header-left h2 {
+    width:100%;
+    font-size: 36px;
+    text-align: center;
 }
 
 .header-right {
-    margin-right: 20vh;
-    display: flex;
-    align-items: center;
+    position: absolute;
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center alignment for items */
+    right: 50px;
+    top: 20px;;
 }
 
-.header-right button, .dropbtn {
-    margin-left: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
+.button-style, .dropbtn {
+    margin-left: 15px;
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    background-color: #3498db; /* Blue background color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.button-style:hover, .dropbtn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+    position: relative; /* Relative positioning */
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    display: none; /* Hide dropdown content by default */
+    position: absolute; /* Absolute positioning */
+    background-color: #f9f9f9; /* Background color */
+    min-width: 160px; /* Minimum width */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow */
+    z-index: 1; /* Ensure it appears above other content */
 }
 
 .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+    color: #333; /* Text color */
+    padding: 12px 16px; /* Padding */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Display as block */
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #f2f2f2; /* Lighter background color on hover */
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* Show dropdown content on hover */
 }
 
 .object-section {
     background-size: cover;
-    height: 45vh;
+    height: 80vh;
     color: #222222;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
-/* Set a minimum height for each section to ensure the background image is visible */
-.object-section {
-    min-height: 300px; /* Adjust the height as needed */
+.object-section-left {
+     justify-content: flex-start;
+}
+
+.object-section-right {
+    justify-content: flex-end;
 }
 
 .object-inline {
-    padding-top: 20px;
-    padding-left: 35vh;
-    position: absolute;
+    display: flex;
     align-items: center;
-    z-index: 99; 
+    justify-content: space-between;
+    background: rgba(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;  /* Added this */
+    z-index: 1;  /* Added this */
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.object-inline div {
+    margin: 0 20px;
 }
 
 .object-inline h2 {
-    margin: 25px;
+    margin-bottom: 10px;
 }
 
 .object-inline p {
-    margin: 0 20px 0 0;
-    text-indent: 25px;
+    margin-bottom: 20px;
 }
 
-img {
-    width: 100%;
+.object-inline img {
+    max-width: 400px;
+    border-radius: 10px;
 }
 
-hr {
-    margin: 40px 0;
-    border: 0;
-    border-top: 1px solid #ccc;
+@keyframes glow-animation {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255); 
+    }
 }
+
+.object-inline:hover {
+    animation: glow-animation 1s infinite alternate;
+}
+
 
 .object-image {
+    position: absolute;
     width: 100%;
-    opacity: 0.1;
-    height: 45vh; 
+    height: 80vh;
     object-fit: cover;
-    object-position: 0% 55%; 
+    opacity: 0.1;
+    z-index: 0;
+
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0) 100%);
 }
 
+
+
+.button-style {
+  background: #1b5089;
+  border-radius: 999px;
+  box-shadow: #1b5089 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.button-style:hover {
+    background-color: #42668d;
+    transform: scale(1.05);
+}
+
+.button-style:active {
+    background-color: #42668d;
+    transform: scale(0.95);
+}
+
+/* Specific backgrounds for each section */
 #object1 {
-    background: url('public/img/object_1.png'), linear-gradient(#fad889, #a49054);
+    background: linear-gradient(#fad889, #a49054);
 }
 
 #object2 {
@@ -143,62 +223,55 @@ hr {
     background-color: #add8d2;
 }
 
-.button-style {
-    align-items: center;
-    appearance: none;
-    background-color: #FCFCFD;
-    border-radius: 4px;
-    border-width: 0;
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
-    box-sizing: border-box;
-    color: #36395A;
-    cursor: pointer;
-    display: inline-flex;
-    height: 48px;
-    justify-content: center;
-    line-height: 1;
-    list-style: none;
-    overflow: hidden;
-    padding-left: 16px;
-    padding-right: 16px;
-    text-align: left;
-    text-decoration: none;
-    transition: box-shadow .15s,transform .15s;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    will-change: box-shadow,transform;
-    font-size: 18px;
+@media (max-width: 768px) {
+    .object-inline {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .object-inline div {
+        margin: 10px 0;
+    }
+
+    .header-left h1, .header-right {
+        margin: 0;
+    }
 }
 
-.button-style:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+.header {
+    width: 100%;
 }
 
-.button-style:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
-  transform: translateY(-2px);
+#object0 {
+    background: linear-gradient(white, #fad889); /* Gradient background */
+    color: black; /* Text color */
+    height: 100vh; /* Full viewport height */
+    display: flex; /* Flexbox layout */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text */
 }
 
-.button-style:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
-  transform: translateY(2px);
+#object0 h2 {
+    font-size: 36px; /* Larger font size */
+    margin-bottom: 20px; /* Bottom margin */
 }
 
-.object-section button {
-    position: absolute;
-    bottom:0px;
+#object0 p {
+    font-size: 18px; /* Font size */
+    margin-bottom: 30px; /* Bottom margin */
 }
 
-.showcase-image {
-    margin-top: 25px;
-    margin-left: 20vh;
-    width:45vh;
-    border-radius: 25px;
+#object0 .button-style {
+    padding: 15px 30px; /* Padding */
+    font-size: 20px; /* Font size */
 }
 
-.object-inline div {
-    float: left;
-    min-width: 400px;
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: #ffffff; 
 }
