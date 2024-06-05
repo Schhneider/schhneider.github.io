@@ -113,6 +113,14 @@ header {
     margin-right: 50px;
 }
 
+.object-inline-info {
+    height: 60vh;
+}
+
+.object-inline-info p {
+    width : 80vh;
+}
+
 .object-inline div {
     margin: 0 20px;
 }
@@ -310,7 +318,7 @@ header {
 
 .arrow4 {
     height: 500px;
-    left: 50vh;
+    left: 60vh;
     top: 392vh;
 }
 
@@ -330,4 +338,69 @@ header {
     height: 500px;
     left: 80vh;
     top: 631vh;
+}
+
+/* Default light mode styles */
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Other specific styles for light and dark mode */
+.light-mode header {
+    background-color: #fff;
+    color: black;
+}
+
+.dark-mode header {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode .object-inline {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode #object0 {
+    color: white;
+    background: linear-gradient(black, #c79a5a);
+}
+
+.dark-mode #object1 {
+    background: linear-gradient(#c79a5a, #725b36);
+}
+
+.dark-mode #object2 {
+    background: linear-gradient(#725b36, #b0a69d);
+}
+
+.dark-mode #object3 {
+    background: linear-gradient(#b0a69d, #7182a6);
+}
+
+.dark-mode #object4 {
+    background: linear-gradient(#7182a6, #c68564);
+}
+
+.dark-mode #object5 {
+    background: linear-gradient(#c68564, #8e8071);
+}
+
+.dark-mode #object6 {
+    background: linear-gradient(#8e8071, #b1b2ac);
+}
+
+.dark-mode #object7 {
+    background: linear-gradient(#b1b2ac, #79908f);
+}
+
+.dark-mode #object8 {
+    background-color: #79908f;
 }

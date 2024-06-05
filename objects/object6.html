@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="lv">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mans ceļš uz LU</title>
+    <link rel="stylesheet" href="../public/styles.css">
+</head>
+<body>
+    <div style="height: 50px; margin-left: 50px; margin-top: 50px; display: flex; align-items: center;">
+        <button class="button-style" style="margin-right: 10px;" onclick="history.back()">Atpakaļ</button>
+        <div style="display: flex; align-items: center;">
+            <img id="light-mode" style="margin-top: 0px; height: 44px; cursor: pointer;" src="../public/img/light_mode.png" alt="Light Mode" onclick="toggleMode('light')">
+            <img id="dark-mode" style="margin-top: 0px; height: 44px; cursor: pointer; display: none;" src="../public/img/dark_mode.png" alt="Dark Mode" onclick="toggleMode('dark')">
+        </div> 
+    </div>    
+    <section id="object" class="object-section">
+        <div class="object-inline object-inline-info">
+            <div>
+                <h2>Vanšu tilts</h2>
+                <p>Vanšu tilts ir saišu tilts pāri Daugavai. Tā garums ir 312 metri. Tas tika atklāts 1981. gadā. Vanšu tilts aizvietoja Valdemāra tiltu, kas darbojās līdz
+                    1950. gadam, un 1964. gadā tika demontēts. Tagad vanšu tilts ir sliktā stāvoklī, un tam ir nepieciešami remontdarbi.
+                </p>
+            </div>
+            <div>
+                <img class="showcase-image" src="../public/img/object_6.jpg" alt="Sestā objekta attēls">
+            </div>
+        </div>
+        <img class="object-image" src="../public/img/object_6.png" alt="Sestā objekta attēls">
+    </section>
+
+    <script>
+        function toggleMode(mode) {
+            var lightModeImg = document.getElementById('light-mode');
+            var darkModeImg = document.getElementById('dark-mode');
+            var body = document.body;
+
+            if (mode === 'light') {
+                body.classList.add('dark-mode');
+                body.classList.remove('light-mode');
+                lightModeImg.style.display = 'none';
+                darkModeImg.style.display = 'inline';
+            } else if (mode === 'dark') {
+                body.classList.add('light-mode');
+                body.classList.remove('dark-mode');
+                lightModeImg.style.display = 'inline';
+                darkModeImg.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -13,18 +13,22 @@
             <h2>Apskates objekti ceļā uz Latvijas Universitāti</h2>
         </div>
         <div class="header-right">
+            <div>
+                <img id="light-mode" src="public/img/light_mode.png" alt="Light Mode" style="height: 44px; cursor: pointer;" onclick="toggleMode('light')">
+                <img id="dark-mode" src="public/img/dark_mode.png" alt="Dark Mode" style="height: 44px; cursor: pointer; display: none;" onclick="toggleMode('dark')">
+            </div>                      
             <button class="button-style" onclick="scrollToTop()">Sākums</button>
             <div class="dropdown">
                 <button class="dropbtn button-style">Apskates objekts</button>
                 <div class="dropdown-content">
-                    <a href="#object1">Pirmais objekts</a>
-                    <a href="#object2">Otrais objekts</a>
-                    <a href="#object3">Trešais objekts</a>
-                    <a href="#object4">Ceturtais objekts</a>
-                    <a href="#object5">Piektais objekts</a>
-                    <a href="#object6">Sestais objekts</a>
-                    <a href="#object7">Septītais objekts</a>
-                    <a href="#object8">Astotais objekts</a>
+                    <a href="#object1">Iļģuciema "Mego"</a>
+                    <a href="#object2">Nordeķu muiža</a>
+                    <a href="#object3">Tilts uz nekurieni</a>
+                    <a href="#object4">Zunda torņi</a>
+                    <a href="#object5">"Swedbank" galvenā ēka</a>
+                    <a href="#object6">Vanšu tilts</a>
+                    <a href="#object7">Latvijas nacionālais teātris</a>
+                    <a href="#object8">Brīvības piemineklis</a>
                 </div>
             </div>
         </div>
@@ -36,8 +40,8 @@
                 <h2>Apskates objekti ceļā uz Latvijas Universitāti</h2>
             </div>
             <div>
-                <p>Šeit ir teksts, kas apraksta pirmo apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
-                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
+                <p>Šeit ir parādīts mans personīgais maršruts pārvietojoties ar velosipēdu.</p>
+                <button class="button-style" onclick="scrollToSection('#object1')">Apskatīt</button>
             </div>
         </div>
     </section>
@@ -47,9 +51,9 @@
     <section id="object1" class="object-section object-section-left">
         <div class="object-inline">
             <div>
-                <h2>Pirmā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta pirmo apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
-                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
+                <h2>Iļģuciema "Mego"</h2>
+                <p>Pirmais objekts ko maršrutā redzu. Tas sevī ietver vairākus veikalus, un ir iļģuciema centrālais lielveikals.</p>
+                <button class="button-style" onclick="moreInfo('object1')">Vairāk informācija</button>
             </div>
             <div>
                 <img class="showcase-image" src="public/img/object_1.jpg" alt="Pirmā objekta attēls">
@@ -63,9 +67,9 @@
     <section id="object2" class="object-section object-section-right">
         <div class="object-inline">
             <div>
-                <h2>Otrā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta otro apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
-                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
+                <h2>Nordeķu muiža</h2>
+                <p>Pāri ielai es redzu nordeķu muižu. Tā ir šī maršruta vecākā ēka.</p>
+                <button class="button-style" onclick="moreInfo('object2')">Vairāk informācija</button>
             </div>
             <div>
                 <img class="showcase-image" src="public/img/object_2.jpg" alt="Otrā objekta attēls">
@@ -79,9 +83,9 @@
     <section id="object3" class="object-section object-section-left">
         <div class="object-inline">
             <div>
-                <h2>Trešā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta trešo apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
-                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
+                <h2>Tilts uz nekurieni</h2>
+                <p>Uzbraucot uz veloceliņa ir redzams tilts uz nekurieni, kas pie paša sākuma ir aptrūcies.</p>
+                <button class="button-style" onclick="moreInfo('object3')">Vairāk informācija</button>
             </div>
             <div>
                 <img class="showcase-image" src="public/img/object_3.jpg" alt="Trešā objekta attēls">
@@ -95,9 +99,9 @@
     <section id="object4" class="object-section object-section-right">
         <div class="object-inline">
             <div>
-                <h2>Ceturtā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta ceturto apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
-                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
+                <h2>Zunda torņi</h2>
+                <p>Zunda torņi mani pārsteidz ar savu izmēru un simetriju.</p>
+                <button class="button-style" onclick="moreInfo('object4')">Vairāk informācija</button>
             </div>
             <div>
                 <img class="showcase-image" src="public/img/object_4.jpg" alt="Ceturtā objekta attēls">
@@ -111,9 +115,9 @@
     <section id="object5" class="object-section object-section-left">
         <div class="object-inline">
             <div>
-                <h2>Piektā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta piekto apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
-                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
+                <h2>"Swedbank" galvenā ēka</h2>
+                <p>Visā maršrutā šī ir visiespaidīgākā ēka no visām. Tai ir ļoti apkopta apkārtne, kā arī pašas ēkas izmērs ir iespaidīgs.</p>
+                <button class="button-style" onclick="moreInfo('object5')">Vairāk informācija</button>
             </div>
             <div>
                 <img class="showcase-image" src="public/img/object_5.jpg" alt="Piektais objekta attēls">
@@ -127,9 +131,9 @@
     <section id="object6" class="object-section object-section-right">
         <div class="object-inline">
             <div>
-                <h2>Sestā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta sesto apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
-                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
+                <h2>Vanšu tilts</h2>
+                <p>Vanšu tilts ir visa maršruta fiziskākā daļa. Uz to ir ļoti stāvas uzbrauktuves, kā arī ietves ir šauras un bedrainas.</p>
+                <button class="button-style" onclick="moreInfo('object6')">Vairāk informācija</button>
             </div>
             <div>
                 <img class="showcase-image" src="public/img/object_6.jpg" alt="Sestā objekta attēls">
@@ -143,9 +147,9 @@
     <section id="object7" class="object-section object-section-left">
         <div class="object-inline">
             <div>
-                <h2>Septītā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta septīto apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
-                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
+                <h2>Latvijas nacionālais teātris</h2>
+                <p>Maršruta detalizētākais apskates objekts. Pie tā vienmēr ir ļoti daudz tūristu, bet visu iespaidu izbojā lielā satiksme. </p>
+                <button class="button-style" onclick="moreInfo('object7')">Vairāk informācija</button>
             </div>
             <div>
                 <img class="showcase-image" src="public/img/object_7.jpg" alt="Septītā objekta attēls">
@@ -159,9 +163,9 @@
     <section id="object8" class="object-section object-section-right">
         <div class="object-inline">
             <div>
-                <h2>Astotā apskates objekta nosaukums</h2>
-                <p>Šeit ir teksts, kas apraksta astoto apskates objektu. Tas var būt ļoti interesants un pilns ar informāciju.</p>
-                <button class="button-style" onclick="moreInfo()">Vairāk informācija</button>
+                <h2>Brīvības piemineklis</h2>
+                <p>Šis apskates objekts ir pats svarīgākais, un mani vienmēr ir pārsteidzis ar savu izskatu un dizainu.</p>
+                <button class="button-style" onclick="moreInfo('object8')">Vairāk informācija</button>
             </div>
             <div>
                 <img class="showcase-image" src="public/img/object_8.jpg" alt="Astotā objekta attēls">
@@ -175,27 +179,84 @@
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
 
-        function moreInfo() {
-            alert('Šeit būs vairāk informācijas par objektu.');
+        function moreInfo(str) {
+            if(str == 'object1'){
+                window.location.href = 'objects/object1.html';
+            } else if(str == 'object2'){
+                window.location.href = 'objects/object2.html';
+            } else if(str == 'object3') {
+                window.location.href = 'objects/object3.html';
+            } else if(str == 'object4') {
+                window.location.href = 'objects/object4.html';
+            } else if(str == 'object5') {
+                window.location.href = 'objects/object5.html';
+            } else if(str == 'object6') {
+                window.location.href = 'objects/object6.html';
+            } else if(str == 'object7') {
+                window.location.href = 'objects/object7.html';
+            } else if(str == 'object8') {
+                window.location.href = 'objects/object8.html';
+            }
         }
 
         window.onscroll = function() { makeHeaderSticky() };
 
-        var header = document.getElementById("header");
-        header.style.display = 'none';
         var headerStartPoint = document.getElementById("myHeaderStartPoint");
-        var sticky = headerStartPoint.offsetTop;
+
+
+        let isSticky = false;  // Flag to check if the header is sticky
+        const header = document.getElementById("header");
+        const sticky = header.offsetTop;
 
         function makeHeaderSticky() {
             if (window.pageYOffset > sticky) {
-             //   header.style.display = 'block';
                 $('#header').fadeIn('fast');
                 header.classList.add("sticky");
+                isSticky = true;
             } else {
-                header.style.display = 'none';
+                $('#header').fadeOut('fast');
                 header.classList.remove("sticky");
+                isSticky = false;
             }
         }
+
+        window.onscroll = function() {
+            makeHeaderSticky();
+        };
+
+        document.addEventListener('mousemove', function(event) {
+            if (isSticky) return;  // Do nothing if the header is sticky
+
+            if (event.clientY < 100) {
+                header.style.display = "flex";
+            } else {
+                header.style.display = "none";
+            }
+        });
+
+        function scrollToSection(sectionId) {
+            var section = document.querySelector(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function toggleMode(mode) {
+            var lightModeImg = document.getElementById('light-mode');
+            var darkModeImg = document.getElementById('dark-mode');
+            var body = document.body;
+
+            if (mode === 'light') {
+                body.classList.add('dark-mode');
+                body.classList.remove('light-mode');
+                lightModeImg.style.display = 'none';
+                darkModeImg.style.display = 'inline';
+            } else if (mode === 'dark') {
+                body.classList.add('light-mode');
+                body.classList.remove('dark-mode');
+                lightModeImg.style.display = 'inline';
+                darkModeImg.style.display = 'none';
+            }
+        }
+
 
     </script>
 </body>
